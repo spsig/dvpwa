@@ -23,4 +23,8 @@ steps:
     python -m pip install --upgrade pip
     pip install -r requirements.txt
   displayName: 'Install dependencies'
+- task: SynopsysPolaris@1
+  inputs:
+      polarisService: 'Polaris Demo'
+      polarisCommand: 'analyze -w --coverity-ignore-capture-failure'
 
